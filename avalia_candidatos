@@ -1,0 +1,19 @@
+# Autor: João Carlos Agra dos Santos
+
+
+def add_cand(): # Entrada da avalição dos condidatos.
+    sair = "s"
+    while sair != "n":
+        cand = input("Nome do candidato: ")
+        e = int(input("Nota da entrevista: "))
+        t = int(input("Nota da avaliação teócica: "))
+        p = int(input("Nota da avaliação prática: "))
+        s = int(input("Nota da avaliação de soft skills: "))
+        selecao.append([cand, f"e{format(e)}_t{format(t)}_p{format(p)}_s{format(s)}"])
+        sair = input("Deseja incluir mais? s ou n ")
+
+
+selecao = []
+add_cand()
+print(selecao)
+
