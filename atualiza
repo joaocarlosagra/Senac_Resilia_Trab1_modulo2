@@ -1,0 +1,47 @@
+# Autor: João Carlos Agra dos Santos
+
+
+def add_cand(): # Entrada da avalição dos condidatos.
+    sair = "s"
+    while sair != "n":
+        cand = input("Nome do candidato: ").lower()
+        e = int(input("Nota da entrevista: "))
+        t = int(input("Nota da avaliação teócica: "))
+        p = int(input("Nota da avaliação prática: "))
+        s = int(input("Nota da avaliação de soft skills: "))
+        selecao.append([cand, f"e{format(e)}_t{format(t)}_p{format(p)}_s{format(s)}"])
+        sair = input("Deseja incluir mais? s ou n ")
+
+def mostra():
+    for cont in range(len(selecao)):
+        print("-"*50)
+        print(selecao[cont])
+        print("-"*50)
+        
+        
+ def notas():
+     e = int(input("Pesquisar nota da entrevista: "))
+     t = int(input("Pesquisar nota da avaliação teórica: "))
+     p = int(input("Pesquisar nota da avaliação prática: "))
+     s = int(input("Pesquisar nota de soft skill: "))
+     for cont in range(len(selecao)):
+         if e >= [:1] : e = cont[:1]
+         if t >= [:2]: t = cont[:2]
+         if p >= [:3]: p = cont[:3]
+         if s >= [:4]: s = cont[:4]
+         buscado.append(selecao[cont])
+         
+             
+def retorno():
+     for cont in range(len(buscado)):
+         print("-"*50) 
+         print(buscado[cont])
+         print("-"*50)
+         
+     
+selecao = []
+buscado = []
+add_cand()
+mostra()
+notas()
+retorno()
